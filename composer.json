@@ -1,0 +1,23 @@
+{
+    "name": "webbird/i18n",
+    "type": "standard",
+    "description": "",
+    "license": "",
+    "require": {
+        "punic/punic": "^3.6"
+    },
+    "require-dev": {
+        "psalm/phar": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "webbird\\i18n\\": "src/i18n",
+            "webbird\\common\\": "../common/src/webbird/common/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "webbird\\i18n\\": "tests/"
+        }
+    }
+}

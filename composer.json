@@ -3,8 +3,15 @@
     "type": "standard",
     "description": "",
     "license": "",
+    "repositories": [
+        {
+			"type": "vcs",
+			"url": "https://github.com/webbird/common"
+		}
+	],
     "require": {
-        "punic/punic": "^3.6"
+        "punic/punic": "^3.6",
+        "webbird/common": "*"
     },
     "require-dev": {
         "psalm/phar": "*"

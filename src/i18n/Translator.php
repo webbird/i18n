@@ -119,13 +119,7 @@ class Translator
         if (isset($this->translations[$textDomain][$locale][$message])) {
             $message = $this->translations[$textDomain][$locale][$message];
         }
-echo "FILE [", __FILE__, "] FUNC [", __FUNCTION__, "] LINE [", __LINE__, "]<br /><textarea style=\"width:100%;height:200px;color:#000;background-color:#fff;\">";
-print_r($message);
-echo "</textarea><br />";
-echo "FILE [", __FILE__, "] FUNC [", __FUNCTION__, "] LINE [", __LINE__, "]<br /><textarea style=\"width:100%;height:200px;color:#000;background-color:#fff;\">";
-print_r($this->wrapKeys($replacements['replacements'],'%'));
-echo "</textarea><br />";
-        if($replacements) {
+        if($replacements && isset($replacements['replacements'])) {
             $message = str_replace(
                     array_keys($this->wrapKeys($replacements['replacements'],'%')), 
                     array_values($replacements['replacements']), 

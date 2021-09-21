@@ -22,7 +22,7 @@ class Translator
     protected string $defaultTextDomain = 'default';
     
     public function __construct() {
-        require __DIR__ . '/../../vendor/autoload.php';
+        #require __DIR__ . '/../../vendor/autoload.php';
     }
     
     /**
@@ -93,6 +93,15 @@ class Translator
     {
         $this->defaultTextDomain = $textdomain;
         return $this;
+    }
+    
+    public function t(
+        string $message, 
+        ?string $textDomain = null, 
+        ?string $locale = null,
+        mixed ...$replacements
+    ) {
+        return $this->translate($message, $textDomain, $locale, $replacements);
     }
     
     /**

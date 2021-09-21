@@ -11,7 +11,7 @@
 	],
     "require": {
         "punic/punic": "^3.6",
-        "webbird/common": "*"
+        "webbird/common": "dev-master"
     },
     "require-dev": {
         "psalm/phar": "*"
